@@ -24,8 +24,8 @@
     
     [self.view addSubview:[self setAdBannerView]];
     
-    
 }
+
 
 #pragma mark---------ADBannerView】初始化
 - (ADBannerView *)setAdBannerView{
@@ -38,6 +38,7 @@
 }
 
 
+
 #pragma mark ----- ADBannerViewDelegate
 - (void) bannerViewDidLoadAd:(ADBannerView *)banner{
     if (!self.adBannerViewIsVisible) {
@@ -47,6 +48,8 @@
         self.adBannerViewIsVisible = YES;
     }
 }
+
+
 
 - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
     if (self.adBannerViewIsVisible) {
